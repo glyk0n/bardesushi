@@ -25,13 +25,13 @@ class HomeController extends Controller
     public function menuAction()
     {
     	//Captura del repo contra la BD. $em x $repository
-    	$em = $this->getDoctrine()->getRepository(Producto::class);
+    	$em = $this->getDoctrine()->getRepository('AppBundle:Producto');
 
     	//findAll productos
     	$productos = $em->findAll();
 
         return $this->render('@App/home/menu.html.twig', array(
-        	'producto' => $productos
+        	'productos' => $productos
         ));
     }
 }

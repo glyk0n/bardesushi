@@ -28,18 +28,18 @@ Database
 1. Clonar o descargar el repositorio
 
 ```bash
-https://github.com/glyk0n/tropik-demo.git
+https://github.com/glyk0n/bardesushi.git
 ```
 
 2. Ejecutar composer
 
 ```bash
-composer instal
+composer install
 ```
 
 ## Autentificación
 
-Utilizar credenciales d eacceso como Admin
+Utilizar credenciales de acceso como Admin
 
 * username: admin
 * password: abc123.
