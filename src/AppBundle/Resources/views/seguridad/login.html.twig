@@ -1,0 +1,35 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <form class="form-signin" action="{{ path('login') }}" method="POST">
+                
+                <h1 class="mt-4 mb-3">
+                    <small>Acceso de administrador</small>
+                </h1>
+                <div class="jumbotron">
+                <label for="_username" class="sr-only">Username</label>
+                <input  type="text"
+                        id="_username"
+                        name="_username"
+                        class="form-control"
+                        placeholder=""
+                        required
+                        autofocus>
+                <label for="_password" class="sr-only">Password</label>
+                <input  type="text"
+                        id="_password"
+                        name="_password"
+                        class="form-control"
+                        placeholder=""
+                        required
+                        autofocus>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button></div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}Galería{% endblock %}
+
+{% block stylesheets %}
+<!-- estilos para esta página -->
+<link href="{{ asset('css/galeria.estilos.css') }}" rel="stylesheet">
+<!--[if lte IE 7]>
+<link rel="stylesheet" href='css/ie_fixes.css' type="text/css" media="screen, projection" />
+<![endif]-->
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+  <div class="gallery" id="gallery">
+    {% for producto in productos %}
+        <!-- Grid column -->
+      <div class="mb-3 pics animation all 2">
+        <img class="img-fluid" src="{{ asset(menuImg ~ producto.foto) }}" alt="{{ producto.nombre}}">
+      </div>
+      <!-- Grid column -->
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

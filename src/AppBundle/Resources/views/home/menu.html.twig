@@ -1,0 +1,37 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block stylesheets %}
+<!-- estilos para esta página -->
+<link href="{{ asset('css/menu.estilos.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+	<div class="container">
+
+		<p class="text-justify" style="padding-top:2em;">Somos un restaurante japonés al estilo de los restaurantes & tabernas Izakaya de Japón y los primeros de Ourense en ofrecer <i>okonomiyaki</i> (tortilla japonesa).<br/> Ofrecemos no sólo sushi, maki, sashimi y los platos más conocidos de los restaurantes japoneses, sino que también tenemos comida japonesa casera con platos de plancha menos habituales como son el karaage o el kushiage.<br/> Platos de plancha menos conocidos como son el <i>karaage</i> (pollo frito) o el <i>kushiage</i> (brocheta empanada).<br/> Nuestro chef japonés, <b>Nikito Nipón</b>, cuenta con amplia experiencia en la restauración de comida japonesa tanto en Osaka como en Tokio y hoy dirige varios restaurantes en todo el mundo.</p>
+
+		<div class="row">
+		{% for producto in productos %}
+			<div class="col-lg-4 col-md-3 col-sm-6">
+				<div class="card mb-4 shadow-sm">
+					{# <img class="card-img-top img-thumbnail" src="{{ asset(menuImg ~ producto.id ~ '.jpg') }}" alt="{{producto.nombre}}"> #}
+					<img class="card-img-top img-thumbnail" src="{{ asset(menuImg ~ producto.foto) }}" alt="{{producto.nombre}}">
+					<div class="card-body">
+              		<p class="card-text">{{producto.descripcion}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+					<a class="btn btn-sm btn-outline-secondary" href="{{ path('plato', { 'id': producto.id }) }}" role="button">{{producto.nombre}}</a>
+                </div>
+                <small class="text-muted"><b>{{producto.precio}}</b> Eur/ud.</small>
+              </div>
+            </div>
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}

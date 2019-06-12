@@ -1,0 +1,52 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}About us{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body, html {
+        height: 100%;
+    }
+    .bg {
+        background-image: url("{{ asset('img/portfolio/fullsize/o_01.jpg') }}");
+        /* toda la altura */
+        height: 100%;
+
+        /* Centrar y escalar la imagen */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        /**/
+        color: red;
+        font-size: 3vh;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        line-height: 2.5em;
+        text-shadow: -1px 0 whitesmoke, 1px 0 whitesmoke, 0 1px whitesmoke, 0 -1px whitesmoke;
+        text-size-adjust: auto;
+    }
+    /* .bg:hover {
+        opacity: 0.75;
+    } */
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="bg">
+    <p class="py-5 text-center">
+    Sentimos pasión por lo que hacemos.<br/>
+    Mejorar es nuestra meta, día a día.<br/>
+    No hay nada imposible para una mente dispuesta.<br/>
+    Honestidad y respeto a nuestros clientes por encima de todo.<br/>
+    Somos el reflejo de la calidad humana de nuestros clientes.<br/>
+    Nuestro equipo es nuestra familia, los cuidamos y nos cuidan.<br/>
+    Buscamos la mejor calidad de materia prima, por eso nuestra carta está sujeta a la disponibilidad del mercado.<br/>
+    El silencio y el respeto son valores que compartimos. Agradecemos vuestra ayuda para conseguirlos.<br/>
+    Escuchamos y aprendemos, cualquier sugerencia es bienvenida.<br/>
+    Para BARdeSuSHI el trabajo no es una moda, es un estilo de vida.<br/>
+    </p>
+</pre>
+</div>
+
+{% endblock %}

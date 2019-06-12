@@ -1,0 +1,65 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}Editar Producto{% endblock %}
+
+{% block stylesheets %}
+<!-- estilos para esta página -->
+<link href="{{ asset('css/edit.estilos.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+{{ form_start(form) }}
+    
+	<div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col-9">
+            <label for="nombre">Nombre</label>
+            {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-3">
+            <label for="nombre">Precio</label>
+            {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-12">
+            <label for="nombre">Descripción</label>
+            {{ form_widget(form.descripcion, {'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+
+    {# <div class="input-group">
+    <div class="input-group-prepend">
+        <div class="input-group-text btn">
+            <span class="btn-file2">
+                <input type="file" accept="image/png, image/jpeg">
+            </span>
+        </div>
+    </div>
+        <input type="text" class="form-control" placeholder="Elegir imagen...">
+    </div>
+
+    {{ form_row(form.foto.setRendered(), {'attr': {'class': 'form-control'}}) }}  #}
+    
+    {{ form_row(form.foto) }}
+
+    {{ form_widget(form.Guardar, {'attr': {'class': 'btn btn-success btn-lg pull-right mt-4'}}) }}
+
+{{ form_end(form) }}
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $('input[type=file]').change(function () {
+            console.log(this.files[0].mozFullPath);
+        });
+    </script>
+{% endblock %}

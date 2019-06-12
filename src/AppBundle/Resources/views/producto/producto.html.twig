@@ -1,0 +1,35 @@
+{% extends '@App/base.html.twig' %}
+
+{% block title %}Lista productos{% endblock %}
+
+{% block content %}
+{% for producto in productos %}
+<div class="container mt-5">
+    <div class="row">
+        <!-- /.col-md-6 -->
+  <div class="col-md-6 mb-5">
+    <div class="card h-100">
+      <div class="card-body">
+            <!-- foto -->
+            <img class="card-img-top" src="{{ asset(menuImg ~ producto.foto) }}" alt="{{producto.nombre}}">
+      </div>
+    </div>
+  </div>
+        <!-- /.col-md-6 mb-5 -->
+  <div class="col-md-6 mb-2">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="card-title">{{producto.nombre}}</h2>
+        <p>{{producto.descripcion}}</p>
+      </div>
+      <div class="card-footer text-center">
+        <a class="btn btn-primary btn-sm" href="{{ path('menupage')}}">Ver Menu</a>
+        <a href="#" class="btn btn-primary btn-sm">+34 788 78 84 72</a>
+        <a href="#" class="btn btn-primary btn-sm">info@bardesushi.com</a>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
