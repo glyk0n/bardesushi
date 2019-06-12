@@ -46,12 +46,12 @@
                   Galería
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Entrantes</a>
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Sashimi</a>
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Tartar</a>
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Niguiri</a>
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Hosomaki</a>
-                  <a class="dropdown-item" href="{{ path('galeria') }}">Uramaki</a>                  
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'ZEN-SAI'}) }}">ZEN-SAI</a>
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'YAKISOBA'}) }}">YAKISOBA</a>
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'GOHAN'}) }}">GOHAN</a>
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'SUSHI'}) }}">SUSHI</a>
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'OSAKANA'}) }}">OSAKANA (Pescados)</a>
+                  <a class="dropdown-item" href="{{ path('galeria', {'categoria':'NIKU RYORI'}) }}">NIKU RYORI (Carnes)</a>                  
                 </div>
               </li>              
   {% if is_granted('ROLE_ADMIN') %}
@@ -62,7 +62,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">                  
                   <a class="dropdown-item" href="{{ path('editproducto') }}">Nuevo</a>
                   <a class="dropdown-item" href="{{ path('productos') }}">Listar</a>
-                  <a class="dropdown-item" href="blog-post.html">Buscar</a>
+                  <!-- <a class="dropdown-item" href="blog-post.html">Buscar</a> -->
                 </div>
               </li>
   {% endif %}

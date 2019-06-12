@@ -17,11 +17,15 @@
     </div>
 
     <div class="row">
-        <div class="col-9">
+        <div class="col-7">
             <label for="nombre">Nombre</label>
             {{ form_widget(form.nombre, {'attr': {'class': 'form-control'}}) }}
         </div>
         <div class="col-3">
+            <label for="categoria">Categoria</label>
+            {{ form_widget(form.categoria, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <div class="col-2">
             <label for="nombre">Precio</label>
             {{ form_widget(form.precio, {'attr': {'class': 'form-control'}}) }}
         </div>

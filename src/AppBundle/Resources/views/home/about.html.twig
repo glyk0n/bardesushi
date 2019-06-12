@@ -18,22 +18,26 @@
         background-size: cover;
 
         /**/
-        color: red;
+        color: whitesmoke;
         font-size: 3vh;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         line-height: 2.5em;
-        text-shadow: -1px 0 whitesmoke, 1px 0 whitesmoke, 0 1px whitesmoke, 0 -1px whitesmoke;
+        /* text-shadow: -1px 0 whitesmoke, 1px 0 whitesmoke, 0 1px whitesmoke, 0 -1px whitesmoke; */
         text-size-adjust: auto;
     }
-    /* .bg:hover {
-        opacity: 0.75;
-    } */
+    .op{
+        opacity: 0;
+    }
+    .op:hover {
+        opacity: .75;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 
 <div class="bg">
+    <div class="container bg-danger op">
     <p class="py-5 text-center">
     Sentimos pasión por lo que hacemos.<br/>
     Mejorar es nuestra meta, día a día.<br/>
@@ -46,6 +50,7 @@
     Escuchamos y aprendemos, cualquier sugerencia es bienvenida.<br/>
     Para BARdeSuSHI el trabajo no es una moda, es un estilo de vida.<br/>
     </p>
+    </div>
 </pre>
 </div>
 

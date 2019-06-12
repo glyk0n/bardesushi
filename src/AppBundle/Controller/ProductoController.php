@@ -57,6 +57,7 @@ class ProductoController extends Controller
 
         $form = $this->createFormBuilder($producto)
             ->add('nombre', TextType::class)
+            ->add('categoria', TextType::class)
             ->add('descripcion', TextareaType::class)
             ->add('precio', TextType::class)
             ->add('foto', FileType::class, array(

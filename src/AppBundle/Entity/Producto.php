@@ -52,6 +52,13 @@ class Producto
      */
     private $precio;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="categoria", type="string", length=64)
+     */
+    private $categoria;
+
 
     /**
      * Get id
@@ -157,5 +164,29 @@ class Producto
     public function getFoto()
     {
         return $this->foto;
+    }
+
+    /**
+     * Set categoria
+     *
+     * @param string $categoria
+     *
+     * @return Producto
+     */
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    /**
+     * Get categoria
+     *
+     * @return string
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
     }
 }

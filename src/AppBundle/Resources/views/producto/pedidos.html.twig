@@ -9,6 +9,11 @@
   <h2>Te llevamos tu pedido a casa</h2>
   <p>BARdeSuSHI te ofrece un exclusivo servicio a domicilio, para que saborees nuestros deliciosos platos sin moverte de casa o sorprendas a tus amigos con una cena especial.</p>
   <p>Realiza tu pedido telefónicamente o través de alguno de nuetros <a href="{{ path('partners') }}">colaboradores</a>. Te lo llevamos a casa o puedes pasar a recogerlo por el local.</p>
+  
+  <div class="col-md-4 text-center pb-3">
+    <button id="btn1" type="button" class="btn btn-outline-secondary centrado">Hacer pedido</button>
+    <button id="btn2" type="button" class="btn btn-outline-secondary centrado">Limpiar Selección</button>
+  </div>
 
   <table class="table">
     <thead>
@@ -22,7 +27,7 @@
     <tbody>
     {% for producto in productos %}
       <tr>
-        <td><input type="checkbox" id="cbox" value="1"></td>
+        <td class="cb"><input type="checkbox" id="cbox" value="1"></td>
         <td>{{producto.nombre}}</td>
         <td>{{producto.descripcion}}</td>
         <td>{{producto.precio}}</td>
@@ -31,4 +36,26 @@
     </tbody>
   </table>
 </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#btn1').click(function(){
+        var data = $('table tr:gt(0)').filter(':has(:checkbox:checked)').map(function(){
+          return{
+            nombre: $(this.cells[1]).text()
+          }
+        }).get();
+        alert(JSON.stringify(data, null, 4));
+      });
+
+      $('#btn2').click(function(){
+        //window.location.reload();
+        $('table').find('input[type=checkbox]:checked').removeAttr('checked');
+      });
+
+    });
+  </script>
 {% endblock %}

@@ -10,6 +10,7 @@
       <tr>
         <th></th>
         <th>Nombre</th>
+        <th>Categoría</th>
         <th>Descripción</th>
         <th>Precio</th>
       </tr>
@@ -17,8 +18,9 @@
     <tbody>
     {% for producto in productos %}
       <tr>
-        <td><input type="checkbox" id="cbox" value="1"></td>
+        <td>-></td>
         <td>{{producto.nombre}}</td>
+        <td>{{producto.categoria}}</td>
         <td>{{producto.descripcion}}</td>
         <td>{{producto.precio}}</td>
       </tr>

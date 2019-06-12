@@ -94,3 +94,4 @@ class Categoria
         return $this->creado;
     }
 }
+

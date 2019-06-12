@@ -58,13 +58,18 @@ class HomeController extends Controller
     /**
      * @Route("/galeria", name="galeria")
      */
-    public function galeriaAction()
+    public function galeriaAction(Request $request, $categoria = null)
     {
         //Captura del repo contra la BD. $em x $repository
     	$em = $this->getDoctrine()->getRepository('AppBundle:Producto');
 
-    	//findAll productos
-    	$productos = $em->findAll();
+        if (!$categoria) {
+                //findAll productos
+                $productos = $em->findAll();
+        }
+    	//find productos by categoria
+        $categoria = $request->get('categoria');
+        $productos = $em->findBy(['categoria' => $categoria]);
 
         return $this->render('@App/home/galeria.html.twig', array(
         	'productos' => $productos
