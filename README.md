@@ -7,11 +7,11 @@ Tutor: José Angel Diz
 Proyecto de Desarrollo de Aplicaciones Web entregado en 2019.  
 Este proyecto, nombrado como **bardesushi**, se centra en el desarrollo de una página web para un hipotético restaurante japonés que abre sus puertas en la ciudad de Ourense. Debe mostrar de forma atractivo las cualidades del local, la filosofía de trabajo, su ubicación y la oferta gastronómica. Así mismo dispondrá de un acceso restringido al administrador para gestionar la carta de productos.
 
-Desde el punto de vista del desarrollador el objetivo es utilizar herramientas y tecnologías vanguardistas en el diseño de aplicaciones web. Así hemos trabajado con el **framework Symfony**, basado en el modelo Vista-controlador, y su gestor de dependencias **Composer** en un entorno virtualizado mediante **VirtualBox** y **Docker**. Esto nos ha permitido familiarizarnos con herramientas como **Doctrine**, plantillas **twig**, **Migraciones**, etc.  
+Desde el punto de vista del desarrollador el objetivo es utilizar herramientas y tecnologías vanguardistas en el diseño de aplicaciones web. Así hemos trabajado con el **framework Symfony**, basado en el modelo Vista-controlador, y su gestor de dependencias **Composer** en un entorno virtualizado mediante **VirtualBox** y **Docker**. Esto nos ha permitido familiarizarnos con herramientas como **Doctrine**, plantillas como **twig**, **Migraciones**, **Bundles**, **phpunit**, etc.  
 El motor de base de datos es **MariaDB** aunque la capa de abstracción del framework y su **ORM** (Mapeo Objeto-relacional) permite la rápida adaptación a cualquier otro.  
-El frontend ha sido desarrollado con las librerías **Bootstrap** y **jQuery**, con pinceladas de **CSS** y **JS** para pequeños ajustes.  
+El frontend ha sido desarrollado con las librerías **Bootstrap** y **jQuery**, con pinceladas de **CSS** y **JS** _'puro'_ para pequeños ajustes.  
 El IDE elegido para el desarrollo ha sido **VS Code** que nos ha simplificado el trabajo de sincronización entre el host y el entono virtualizado así como otras interesantes herramientas de debugging y ayuda a la codificación (Tambien hemos probado Eclipse, Sublime Text y Brackets).  
-Como entono de **VSC** hemos elegido **Git** y usado como repositorio remoto **GitHub** con objeto de compartir en código fuente con nuestro equipo de profesores.
+Como entono de **VCS** hemos elegido **Git** y usado como repositorio remoto **GitHub** con objeto de compartir en código fuente con nuestro equipo de profesores.
 
 ----
 GitHub
