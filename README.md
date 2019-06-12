@@ -1,27 +1,37 @@
 ## Proyecto BARdeSuSHI
 
-Autor: Me
+Autor: Juan José Gómez Vázquez  
 Tutor: José Angel Diz
 
 ----
+Proyecto de Desarrollo de Aplicaciones Web entregado en 2019.  
+Este proyecto, nombrado como **bardesushi**, se centra en el desarrollo de una página web para un hipotético restaurante japonés que abre sus puertas en la ciudad de Ourense. Debe mostrar de forma atractivo las cualidades del local, la filosofía de trabajo, su ubicación y la oferta gastronómica. Así mismo dispondrá de un acceso restringido al administrador para gestionar la carta de productos.
 
+Desde el punto de vista del desarrollador el objetivo es utilizar herramientas y tecnologías vanguardistas en el diseño de aplicaciones web. Así hemos trabajado con el **framework Symfony**, basado en el modelo Vista-controlador, y su gestor de dependencias **Composer** en un entorno virtualizado mediante **VirtualBox** y **Docker**. Esto nos ha permitido familiarizarnos con herramientas como **Doctrine**, plantillas **twig**, **Migraciones**, etc.  
+El motor de base de datos es **MariaDB** aunque la capa de abstracción del framework y su **ORM** (Mapeo Objeto-relacional) permite la rápida adaptación a cualquier otro.  
+El frontend ha sido desarrollado con las librerías **Bootstrap** y **jQuery**, con pinceladas de **CSS** y **JS** para pequeños ajustes.  
+El IDE elegido para el desarrollo ha sido **VS Code** que nos ha simplificado el trabajo de sincronización entre el host y el entono virtualizado así como otras interesantes herramientas de debugging y ayuda a la codificación (Tambien hemos probado Eclipse, Sublime Text y Brackets).  
+Como entono de **VSC** hemos elegido **Git** y usado como repositorio remoto **GitHub** con objeto de compartir en código fuente con nuestro equipo de profesores.
+
+----
 GitHub
+
+```bash
+https://github.com/glyk0n/bardesushi.git
+```
 
 Symfony
 
+```bash
+https://symfony.com/
+```
+
 Database
-	- name: symfonydb
-	- user: usersf
-	- password: abc123.
 
-	CREATE DATABASE symfonydb;
-	GRANT ALL ON symfonydb.* TO 'usersf'@'localhost' identified by 'abc123.';
-
-
-
-* Basado en el framwork Symfony 3.4
-* Bootstrap templates
-* VS Code IDE and Sublime Text IDE
+```bash
+CREATE DATABASE symfonydb;
+GRANT ALL ON symfonydb.* TO 'usersf'@'localhost' identified by 'abc123.';
+```
 
 ## Instalación
 
@@ -42,8 +52,12 @@ composer install
 Utilizar credenciales de acceso como Admin
 
 * username: admin
-* password: abc123.
+* password: admin1
 
+## Despliegue 
+```bash
+http://bardesushi.enxebreformacion.com/web/
+```
 
 Symfony Standard Edition
 ========================
